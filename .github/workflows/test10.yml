@@ -12,4 +12,5 @@ jobs:
         with:
           node-version: '16'
       - run: npm install
-      - run: npx jest -t "Should fetch species"
+      - run: npm install -g jest # Instala Jest globalmente
+      - run: jest -t "Should fetch droids" # Executa Jest globalmente

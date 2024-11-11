@@ -1,4 +1,4 @@
-name: Test 4 - Fetch Films
+name: Test 4 - Fetch Vehicles
 
 on: [push, pull_request]
 
@@ -12,4 +12,6 @@ jobs:
         with:
           node-version: '16'
       - run: npm install
-      - run: npx jest -t "Should fetch films"
+      - run: npm install -g jest # Instala Jest globalmente
+      - run: jest -t "Should fetch vehicles" # Executa Jest globalmente
+

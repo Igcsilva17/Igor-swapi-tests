@@ -1,4 +1,4 @@
-name: Test 3 - Fetch Specific Planet
+name: Test 3 - Fetch Characters
 
 on: [push, pull_request]
 
@@ -12,4 +12,6 @@ jobs:
         with:
           node-version: '16'
       - run: npm install
-      - run: npx jest -t "Should fetch specific planet by ID"
+      - run: npm install -g jest # Instala Jest globalmente
+      - run: jest -t "Should fetch characters" # Executa Jest globalmente
+

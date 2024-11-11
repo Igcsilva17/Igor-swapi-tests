@@ -12,4 +12,5 @@ jobs:
         with:
           node-version: '16'
       - run: npm install
-      - run: ./node_modules/.bin/jest -t "Should fetch starships" # Executa Jest diretamente
+      - run: npm install -g jest # Instala Jest globalmente
+      - run: jest -t "Should fetch starships" # Executa Jest globalmente

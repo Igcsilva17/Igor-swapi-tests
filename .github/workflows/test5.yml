@@ -1,4 +1,4 @@
-name: Test 5 - Fetch Specific Film
+name: Test 5 - Fetch Species
 
 on: [push, pull_request]
 
@@ -12,4 +12,5 @@ jobs:
         with:
           node-version: '16'
       - run: npm install
-      - run: npx jest -t "Should fetch specific film by ID"
+      - run: npm install -g jest # Instala Jest globalmente
+      - run: jest -t "Should fetch species" # Executa Jest globalmente

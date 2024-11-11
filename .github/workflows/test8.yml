@@ -1,4 +1,4 @@
-name: Test 8 - Fetch Vehicles
+name: Test 8 - Fetch Locations
 
 on: [push, pull_request]
 
@@ -12,4 +12,5 @@ jobs:
         with:
           node-version: '16'
       - run: npm install
-      - run: npx jest -t "Should fetch vehicles"
+      - run: npm install -g jest # Instala Jest globalmente
+      - run: jest -t "Should fetch locations" # Executa Jest globalmente

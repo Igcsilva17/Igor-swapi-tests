@@ -1,4 +1,4 @@
-name: Test 7 - Fetch Specific Person
+name: Test 7 - Fetch People
 
 on: [push, pull_request]
 
@@ -12,4 +12,5 @@ jobs:
         with:
           node-version: '16'
       - run: npm install
-      - run: npx jest -t "Should fetch specific person by ID"
+      - run: npm install -g jest # Instala Jest globalmente
+      - run: jest -t "Should fetch people" # Executa Jest globalmente

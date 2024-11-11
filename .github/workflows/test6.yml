@@ -1,4 +1,4 @@
-name: Test 6 - Non-existent Route
+name: Test 6 - Fetch Movies
 
 on: [push, pull_request]
 
@@ -12,4 +12,5 @@ jobs:
         with:
           node-version: '16'
       - run: npm install
-      - run: npx jest -t "Should return 404 for an unknown endpoint"
+      - run: npm install -g jest # Instala Jest globalmente
+      - run: jest -t "Should fetch movies" # Executa Jest globalmente

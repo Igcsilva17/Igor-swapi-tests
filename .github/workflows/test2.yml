@@ -12,4 +12,4 @@ jobs:
         with:
           node-version: '16'
       - run: npm install
-      - run: npx jest -t "Should fetch starships"
+      - run: ./node_modules/.bin/jest -t "Should fetch starships" # Executa Jest diretamente
